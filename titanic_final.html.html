@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src = "http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+	<!-- CSS styling -->
+	<style>
+		body{
+		text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		function draw(data){
+		"use strict";
+         var margin = 75,
+         width = 1400 - margin,
+         height = 600 - margin;
+		 
+	// First chart : it shows relationship between a person's ticket Percentage and his survival Percentage
+		//svg variable definition 
+		var svg  = d3.select("body").append("svg")
+					.attr("width",width+margin-500)
+					.attr("height",height+margin-200)
+					.append("g")
+					.attr("class","chart");
+		//myChart dimple variable definition
+		var myChart = new dimple.chart(svg, data);
+		var x = myChart.addCategoryAxis("x", ["Is_VIP","Sex"]);
+		x.fontSize = "12px";
+		x.title ="Person's Category (VIP / General  / Lower)"
+		var y = myChart.addMeasureAxis("y","Survived");
+		y.fontSize = "12px";
+		y.tickFormat = "%";
+		y.title = "Survival Percentage"
+		//dimple addSeries aggregate method for calculating avg(percentage) of y axis
+		var mySeries = myChart.addSeries("Sex", dimple.plot.bar);
+        mySeries.aggregate = dimple.aggregateMethod.avg;
+		
+		svg.append("text")
+                .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+                .attr("y", myChart._yPixels() - 10)
+                .style("text-anchor", "middle")
+                .style("font-family", "sans-serif")
+                .style("font-size", "75%")
+				.style("font-weight", "bold")
+                .text("Distribution of Survival Percentage vs Categorization according to ticket fare");
+		myChart.addLegend(65, 100, 510, 20, "right");
+		myChart.draw();
+		
+		
+	// Second chart : it shows relationship between a person's Sex and his/her survival chance
+		//svg variable definition 	
+		var svg  = d3.select("body").append("svg")
+					.attr("width",width+margin-500)
+					.attr("height",height+margin-200)
+					.append("g")
+					.attr("class","chart");
+		
+					
+		var myChart = new dimple.chart(svg, data);
+		var x = myChart.addCategoryAxis("x", ["Sex"]);
+		x.fontSize = "12px";
+		var y = myChart.addMeasureAxis("y","Survived");
+		y.fontSize = "12px";
+		y.tickFormat="%";
+		y.title = "Survival Percentage"
+		//dimple addSeries aggregate method for calculating avg(percentage) of y axis
+		var mySeries = myChart.addSeries("Sex", dimple.plot.bar);
+		mySeries.aggregate = dimple.aggregateMethod.avg;
+		
+		svg.append("text")
+                .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+                .attr("y", myChart._yPixels() - 10)
+                .style("text-anchor", "middle")
+                .style("font-family", "sans-serif")
+                .style("font-size", "75%")
+				.style("font-weight", "bold")
+                .text("Distribution of Survival Percentage vs Sex Ratio");
+		myChart.addLegend(65, 100, 510, 20, "right");
+		myChart.draw();
+		
+		
+		// 3rd chart : it shows relationship between a person's Sex &  age and his/her survival chance
+		//svg variable definition 	
+		var svg  = d3.select("body").append("svg")
+					.attr("width",width+margin-500)
+					.attr("height",height+margin-200)
+					.append("g")
+					.attr("class","chart");
+					
+		var myChart = new dimple.chart(svg, data);
+		var x = myChart.addCategoryAxis("x", ["IsChild","Sex"]);
+		x.fontSize = "12px";
+		var y = myChart.addMeasureAxis("y","Survived");
+		y.fontSize = "12px";
+		y.tickFormat="%";
+		y.title = "Survival Percentage"
+		//dimple addSeries aggregate method for calculating avg(percentage) of y axis
+		var mySeries = myChart.addSeries("Sex", dimple.plot.bar);
+		mySeries.aggregate = dimple.aggregateMethod.avg;
+		svg.append("text")
+                .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+                .attr("y", myChart._yPixels() - 10)
+                .style("text-anchor", "middle")
+                .style("font-family", "sans-serif")
+                .style("font-size", "75%")
+				.style("font-weight", "bold")
+                .text("Distribution of Survival Percentage vs Sex Ratio vs Age Categorization");
+		myChart.addLegend(65, 100, 510, 20, "right");
+		myChart.draw();
+		
+		// 4th chart : it shows relationship between a person's Sex & his passenger class ticket(1st, 2nd or 3rd ) and his/her survival chance
+		//svg variable definition 	
+	
+		 var svg  = d3.select("body").append("svg")
+					.attr("width",width+margin-500)
+					.attr("height",height+margin-200)
+					.append("g")
+					.attr("class","chart");
+					
+		var myChart = new dimple.chart(svg, data);
+		var x = myChart.addCategoryAxis("x", ["Passenger class","Sex"]);
+		x.fontSize = "12px";
+		var y = myChart.addMeasureAxis("y","Survived");
+		y.fontSize = "12px";
+		y.tickFormat="%";
+		y.title = "Survival Percentage"
+		//dimple addSeries aggregate method for calculating avg(percentage) of y axis
+		var mySeries = myChart.addSeries("Sex", dimple.plot.bar);
+		mySeries.aggregate = dimple.aggregateMethod.avg;
+		svg.append("text")
+                .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+                .attr("y", myChart._yPixels() - 10)
+                .style("text-anchor", "middle")
+                .style("font-family", "sans-serif")
+                .style("font-size", "75%")
+				.style("font-weight", "bold")
+                .text("	Distribution of Survival Percentage vs Passenger Class vs Sex Ratio");
+		myChart.addLegend(65, 100, 510, 20, "right");
+		myChart.draw();
+		
+		// 5th chart : it shows relationship between a person's  Embarkment Station & Sex and his/her survival chance
+		//svg variable definition 	
+			
+		 var svg  = d3.select("body").append("svg")
+					.attr("width",width+margin-500)
+					.attr("height",height+margin-200)
+					.append("g")
+					.attr("class","chart");
+					
+		var myChart = new dimple.chart(svg, data);
+		var x = myChart.addCategoryAxis("x", ["Embarked","Sex"]);
+		x.fontSize = "12px";
+		x.title="Embarkment Stn(C = Cherbourg; Q = Queenstown; S = Southampton)";
+		var y = myChart.addMeasureAxis("y","Survived");
+		y.fontSize = "12px";
+		y.tickFormat="%";
+		y.title = "Survival Percentage"
+		//dimple addSeries aggregate method for calculating avg(percentage) of y axis
+		var mySeries = myChart.addSeries("Sex", dimple.plot.bar);
+		mySeries.aggregate = dimple.aggregateMethod.avg;
+		
+		svg.append("text")
+                .attr("x", myChart._xPixels() + myChart._widthPixels() / 2)
+                .attr("y", myChart._yPixels() - 10)
+                .style("text-anchor", "middle")
+                .style("font-family", "sans-serif")
+                .style("font-size", "75%")
+				.style("font-weight", "bold")
+                .text("	Distribution of Survival Percentage vs Embarkment Station ");
+		myChart.addLegend(65, 100, 510, 20, "right");
+		myChart.draw();
+		
+		};
+	</script>
+</head>
+<body class="container">
+	<h2>Project 6: Data Visualizations of Titanic Dataset</h2>
+	<h3>Submitted By : RAHUL SAXENA </h3>
+	
+	
+	
+	<script type="text/javascript">
+	<!-- data uploading js component-->
+	d3.csv("titanic_updated.csv",draw);
+	</script>
+</body>
+</html>
