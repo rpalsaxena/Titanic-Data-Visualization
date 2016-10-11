@@ -57,18 +57,24 @@ Hope this helps.
 
 by George Liu -udacity forum
 
+Feedback provided by George about using percentage scale is a good suggestion. I have changed the numerical scale to percentage scale. But his suggestion about grid-lines is not implemented in my final report ,since mouse over option is available on Desktop devices but on mobile device mouseover  doesn't work. So, it may give a good look for desktop users but not for mobile one
+
 ### Feedback-2
 The 3rd graph/distribution - can you make the colors different than others or make that graph similar to others because in my mind after 2 graphs one represents male, one female.
 
 by Sankalp:whatsapp group
+
+I have changed the graph's distribution to implement the feedback given by Sankalp regarding 3rd graph's issue. 
 
 ### Feedback-3
 You need to work on third graph. I took time to interpret it. The x-labels and y-labels are quite small. Can you increase its font size?
 
 by Akshit:whatsapp group
 
+Feedback regarding 3rd graph is implemented by changing its distribution. I have increased the size of x/y-labels.
 ----
-Feedback provided by George about using percentage scale is a good suggestion. I have changed the numerical scale to percentage scale. But his suggestion about grid-lines is not implemented in my final report ,since mouse over option is available on Desktop devices but on mobile device mouseover  doesn't work. So, it may give a good look for desktop users but not for mobile one
+
+
 
 -----------
 ## Resources 
