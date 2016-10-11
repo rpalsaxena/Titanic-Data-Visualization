@@ -67,6 +67,9 @@ You need to work on third graph. I took time to interpret it. The x-labels and y
 
 by Akshit:whatsapp group
 
+----
+Feedback provided by George about using percentage scale is a good suggestion. I have changed the numerical scale to percentage scale. But his suggestion about grid-lines is not implemented in my final report ,since mouse over option is available on Desktop devices but on mobile device mouseover  doesn't work. So, it may give a good look for desktop users but not for mobile one
+
 -----------
 ## Resources 
 -----------
