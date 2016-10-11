@@ -5,6 +5,7 @@
 On April 15, 1912, during her maiden voyage, the Titanic sank after colliding with an iceberg, killing 1502 out of 2224 passengers and crew. Here we have a dataset of 837 people. I have done analysis as well as drawn some visualizations. My main interest is to show the survival chances of people w.r.t Sex , Age, Embarkment station, Person's Category.
 
 In the chart, you can observe the following things.
+
 **Chart1 : Distribution of Survival Percentage vs Categorization according to ticket fare**
   
   If a person is travelling with high price ticket i.e, VIPs then their survival rate is much higher then General & Lower Class / Employees.
