@@ -19,8 +19,9 @@ In the chart, you can observe the following things.
  
 **Chart5 : Distribution of Survival Percentage vs Embarkment Station**
   It shows that people who boarded from :
-    Cherbourg had higher probablity of survival
-    Southampton had lowest probablity of survival
+  
+  ⋅⋅* Cherbourg had higher probablity of survival
+  ⋅⋅* Southampton had lowest probablity of survival
  
 
 ---------
