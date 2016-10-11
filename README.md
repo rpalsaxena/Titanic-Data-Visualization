@@ -28,17 +28,51 @@ In the chart, you can observe the following things.
   
   * Cherbourg had higher probablity of survival
   * Southampton had lowest probablity of survival
- 
+
+
+I have done some analysis work on Dataset. I have attached python notebook in the same repo, kindly check it for reference. Raw dataset is named with _"titanic_data.csv"_ & updated dataset after analysis is _"titanic_updated.csv"_.
+
 
 ---------
 ## Design
 --------
+In this data set our main motive was to understand, which attributes influenced survival rate. So, I chose BarGraph using dimplejs API which is build on top of D3js. These helped me to give an interactive look for this analysis. In my python analysis I used seaborn library for drawing graphs but still the quality and interactiveness in the graphs drawn by Dimplejs is amazing.
 
+### Changes in design after Feedback:
+ * I changed y-axis from numerical(count) scale to percentage scale i.e, changed "No. of people survived" to "Percentage of people survived".
+ * Increased the Font-size of X-label and y-label
+ * Changed the 3rd graph's distribution.
+ 
 -----------
 ## Feedback
 -----------
+### Feedback-1
+Hi Rahul,
+
+Good work! I have two suggestions for your consideration:
+
+1. Using percentage scale versus the raw scale for the y-axis could be more intuitive for the audience as that's the normal practice people anticipate. You can use percentages based on each graph, i.e. for the first graph, use percentages that are calculated based on the total of that graph for each bar combination;
+2. Since the bars can clearly show the relationship, maybe it's not necessary to have the grid-lines any more, also since when you mouse over, the numbers will show anyways.
+Hope this helps.
+
+by George Liu -udacity forum
+
+### Feedback-2
+The 3rd graph/distribution - can you make the colors different than others or make that graph similar to others because in my mind after 2 graphs one represents male, one female.
+
+by Sankalp:whatsapp group
+
+### Feedback-3
+You need to work on third graph. I took time to interpret it. The x-labels and y-labels are quite small. Can you increase its font size?
+
+by Akshit:whatsapp group
 
 -----------
 ## Resources 
 -----------
-
+* https://discussions.udacity.com/t/need-feedback-for-project-6-titanic-dataset/192680/
+* https://discussions.udacity.com/t/how-to-change-no-of-survived-people-to-survival-rate-on-y-axis-titanic/192685
+* https://github.com/PMSI-AlignAlytics/dimple/wiki
+* https://github.com/d3/d3/wiki
+* http://stackoverflow.com/questions/36171665/dimplejs-y-axis-values-in-percentages
+* http://www.d3noob.org/2012/12/the-css-portion-of-d3-graph.html
