@@ -64,9 +64,6 @@ You need to work on third graph. I took time to interpret it. The x-labels and y
 by Akshit:whatsapp group
 
 Feedback regarding 3rd graph is implemented by changing its distribution. I have increased the size of x/y-labels.
-----
-
-
 
 -----------
 ## Resources 
