@@ -14,24 +14,16 @@ In the chart, you can observe the following things.
   
   It gives an insight that Females were preferred to be saved i.e, their survival rate was high.
 
-**Chart3 : Distribution of Survival Percentage vs Sex Ratio vs Age Categorization**
+**Chart3 : Distribution of Survival Percentage vs Age Categorization**
   
   It gives an insight that survival of children were higher than Adults and Senior Citizens.
 
-**Chart4 : Distribution of Survival Percentage vs Passenger Class vs Sex Ratio**
+**Chart4 : Distribution of Survival Percentage vs Passenger Class**
   
   It shows that Upper Class(1st) were preffered over Middle Class(2nd) & Lower Class(3rd) passenger.
  
-**Chart5 : Distribution of Survival Percentage vs Embarkment Station**
-  
-  It shows that people who boarded from :
-  
-  * Cherbourg had higher probablity of survival
-  * Southampton had lowest probablity of survival
-
-
+ 
 I have done some analysis work on Dataset. I have attached python notebook in the same repo, kindly check it for reference. Raw dataset is named with _"titanic_data.csv"_ & updated dataset after analysis is _"titanic_updated.csv"_.
-
 
 ---------
 ## Design
